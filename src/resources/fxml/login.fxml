@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="261.0" prefWidth="576.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.LoginController">
+   <children>
+      <AnchorPane layoutX="118.0" layoutY="89.0" prefHeight="325.0" prefWidth="674.0" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="122.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="222.0" layoutY="6.0" prefHeight="38.0" prefWidth="103.0" text="Label">
+               <opaqueInsets>
+                  <Insets top="50.0" />
+               </opaqueInsets>
+            </Label>
+            <Label layoutX="25.0" layoutY="71.0" prefHeight="36.0" prefWidth="72.0" text="用户名">
+               <opaqueInsets>
+                  <Insets left="50.0" />
+               </opaqueInsets>
+            </Label>
+            <TextField layoutX="113.0" layoutY="65.0" prefHeight="49.0" prefWidth="339.0" />
+            <Label layoutX="23.0" layoutY="129.0" prefHeight="49.0" prefWidth="72.0" text="密码" />
+            <CheckBox layoutX="113.0" layoutY="198.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" />
+            <Label layoutX="28.0" layoutY="198.0" text="记住密码" />
+            <PasswordField fx:id="pass_hidden" layoutX="113.0" layoutY="129.0" prefHeight="49.0" prefWidth="339.0" />
+            <TextField fx:id="pass_text" layoutX="113.0" layoutY="130.0" prefHeight="49.0" prefWidth="339.0" />
+            <CheckBox fx:id="pass_toggle" layoutX="485.0" layoutY="141.0" mnemonicParsing="false" text="显示密码" />
+            <Button layoutX="295.0" layoutY="193.0" mnemonicParsing="false" text="登录" />
+         </children>
+      </AnchorPane>
+
+   </children>
+</AnchorPane>
