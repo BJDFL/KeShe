@@ -19,7 +19,7 @@ public class LoginController {
             return;
         }
         pass_hidden.setText(pass_text.getText());
-        pass_hidden.setVisible(false);
+        pass_hidden.setVisible(true);
         pass_text.setVisible(false);
     }
     private String getPassword(){
