@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.RegisterController">
+   <children>
+      <VBox layoutX="271.0" layoutY="65.0" prefHeight="198.0" prefWidth="593.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+
+               <children>
+                  <Label prefHeight="37.0" prefWidth="107.0" text="注册的用户名">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField labelFloat="true" prefHeight="38.0" prefWidth="331.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="107.0" text="注册的密码">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField labelFloat="true" prefHeight="38.0" prefWidth="331.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="782.0" layoutY="263.0" prefHeight="45.0" prefWidth="89.0" ripplerFill="#8095d3" text="Button" textFill="#225a5e">
+
+            </JFXButton>
+   </children>
+</AnchorPane>

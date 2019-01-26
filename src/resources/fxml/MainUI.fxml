@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <TreeView layoutX="54.0" layoutY="134.0" prefHeight="558.0" prefWidth="218.0" />
+      <FlowPane layoutX="272.0" layoutY="134.0" prefHeight="558.0" prefWidth="734.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </FlowPane>
+      <Pane layoutX="1006.0" layoutY="342.0" prefHeight="327.0" prefWidth="192.0" />
+
+   </children>
+</AnchorPane>
