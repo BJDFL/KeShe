@@ -12,7 +12,10 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import jdk.nashorn.internal.objects.annotations.Getter;
 import main.java.service.ChangeService;
+import main.java.model.alert;
+import main.java.service.UserService;
 
+import java.awt.event.MouseEvent;
 import java.io.*;
 import java.net.URL;
 import java.util.Iterator;
@@ -55,15 +58,15 @@ public class LoginController implements Initializable {
          else pass_hidden.setText(password);
     }
     @FXML
-    public void handleSubmitButtonAction(ActionEvent event) {
+    public void handleSubmitButtonAction() {
         String loginName = username.getText();
         String password = getPassword();
-        rememberUser = remember.isScaleShape() ? 1 : 0;
+        rememberUser = remember.isSelected() ? 1 : 0;
         if (rememberUser == 1) {
             if (!loginName.isEmpty() && !password.isEmpty()) {
                 Properties prop = new Properties();
                 try {
-                    FileOutputStream oFile = new FileOutputStream("user.properties", false);
+                    FileOutputStream oFile = new FileOutputStream("tmpuser.properties", false);
                     prop.setProperty(loginName, password);
                     prop.store(oFile, null);
                     oFile.close();
@@ -72,12 +75,16 @@ public class LoginController implements Initializable {
                 }
             }
         }
+        else {
+            File f = new File("tmpuser.properties");
+            f.delete();
+        }
     }
     @FXML
     public void login(){
         String loginName = username.getText();
         String password = getPassword();
-        if(loginName.equals("admin") && password.equals("123456")){
+        if(UserService.user_match(loginName,password)){
            try{
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("/resources/fxml/MainUI.fxml"));
@@ -90,15 +97,31 @@ public class LoginController implements Initializable {
                e.printStackTrace();
            }
         }
+        else {
+            alert.showAlert("用户名或密码错误","请重新输入",ChangeService.stage);
+        }
     }
-
+    @FXML
+    public void register(){
+        try{
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/resources/fxml/register.fxml"));
+            Parent root = (Parent)loader.load();
+            Scene scene = new Scene(root);
+            ChangeService.stage.setScene(scene);
+            ChangeService.stage.setTitle("picture-system1.0");
+            ChangeService.stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         Properties prop = new Properties();
         try {
-            if (new File("user.properties").exists()) {
+            if (new File("tmpuser.properties").exists()) {
                 remember.setSelected(true);
-                InputStream in = new BufferedInputStream(new FileInputStream("user.properties"));
+                InputStream in = new BufferedInputStream(new FileInputStream("tmpuser.properties"));
                 prop.load(in);
                 Iterator<String> it = prop.stringPropertyNames().iterator();
                 while (it.hasNext()) {

@@ -12,7 +12,7 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controller.RegisterController">
    <children>
-      <VBox layoutX="271.0" layoutY="65.0" prefHeight="198.0" prefWidth="593.0">
+      <VBox layoutX="278.0" layoutY="103.0" prefHeight="320.0" prefWidth="593.0">
          <children>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
 
@@ -22,31 +22,46 @@
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <JFXTextField labelFloat="true" prefHeight="38.0" prefWidth="331.0">
+                  <JFXTextField fx:id="user_name" focusColor="#c36e3d" labelFloat="true" prefHeight="38.0" prefWidth="331.0">
                      <font>
                         <Font size="15.0" />
                      </font>
                   </JFXTextField>
                </children>
             </HBox>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="593.0">
                <children>
                   <Label prefHeight="37.0" prefWidth="107.0" text="注册的密码">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Label>
-                  <JFXTextField labelFloat="true" prefHeight="38.0" prefWidth="331.0">
+                  <JFXPasswordField fx:id="user_password" focusColor="#c66d47" prefHeight="16.0" prefWidth="330.0">
                      <font>
                         <Font size="15.0" />
                      </font>
-                  </JFXTextField>
+                  </JFXPasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="101.0" prefWidth="593.0">
+               <children>
+                  <Label prefHeight="37.0" prefWidth="107.0" text="请再次输入密码">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <JFXPasswordField fx:id="password" focusColor="#a86e40" prefHeight="34.0" prefWidth="335.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXPasswordField>
                </children>
             </HBox>
          </children>
       </VBox>
-      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="782.0" layoutY="263.0" prefHeight="45.0" prefWidth="89.0" ripplerFill="#8095d3" text="Button" textFill="#225a5e">
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="782.0" layoutY="378.0" onAction="#register" prefHeight="45.0" prefWidth="89.0" ripplerFill="#8095d3" text="Button" textFill="#225a5e">
 
             </JFXButton>
+      <JFXButton onAction="#back" layoutX="281.0" layoutY="81.0" prefHeight="30.0" prefWidth="60.0" text="返回" />
    </children>
 </AnchorPane>

@@ -51,16 +51,12 @@
                <font>
                   <Font size="17.0" />
                </font></JFXButton>
-            <JFXCheckBox onAction="#handleSubmitButtonAction" fx:id="remember" checkedColor="#55c4d0" layoutX="34.0" layoutY="195.0" prefHeight="26.0" prefWidth="103.0" text="记住密码">
+            <JFXCheckBox fx:id="remember" checkedColor="#55c4d0" layoutX="34.0" layoutY="195.0" onMouseClicked="#handleSubmitButtonAction" prefHeight="26.0" prefWidth="103.0" text="记住密码">
                <font>
                   <Font size="17.0" />
                </font>
             </JFXCheckBox>
-            <JFXTextField alignment="CENTER" layoutX="361.0" layoutY="193.0" prefHeight="16.0" prefWidth="60.0" promptText="key.unspecified" text="注册用户" unFocusColor="#225ab5">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXTextField>
+            <JFXButton onAction="#register" layoutX="340.0" layoutY="197.0" prefHeight="16.0" prefWidth="79.0" text="注册用户" />
          </children>
          <opaqueInsets>
             <Insets right="200.0" />
