@@ -1,5 +1,6 @@
 package main.java.controller;
 
+import com.jfoenix.controls.JFXChipView;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;

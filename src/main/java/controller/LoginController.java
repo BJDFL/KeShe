@@ -1,6 +1,8 @@
 package main.java.controller;
 
 import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXChip;
+import com.jfoenix.controls.JFXChipView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -34,7 +36,8 @@ public class LoginController implements Initializable {
     @FXML
     private JFXCheckBox remember;
     private static int rememberUser = 1;
-
+    @FXML
+    private JFXChipView  chipview;
     @FXML
     public void togglevisiblePassword(ActionEvent event) {
         if (pass_toggle.isSelected()) {

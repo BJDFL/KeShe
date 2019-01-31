@@ -64,6 +64,9 @@
       </AnchorPane>
 
    </children>
+   <JFXChipView fx:id="chipview">
+
+   </JFXChipView>
    <padding>
       <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
    </padding>
