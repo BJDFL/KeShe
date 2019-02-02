@@ -7,7 +7,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import main.java.controller.MainUIController;
 
+import java.io.File;
 import java.net.MalformedURLException;
+import java.util.ArrayList;
 
 public class PictureInstance extends javafx.scene.control.Label {
     private Label label;
@@ -20,7 +22,6 @@ public class PictureInstance extends javafx.scene.control.Label {
         this.pictureFile=pictureFile;
         this.mainUIController=mainUIController;
         init();
-
     }
     private void init()throws MalformedURLException {
         this.setGraphicTextGap(10);
@@ -33,4 +34,22 @@ public class PictureInstance extends javafx.scene.control.Label {
         this.setText(pictureName.getText());
         this.setGraphic(imageView);
     }
+    public File getImageFile() {
+        return this.pictureFile.getImageFile();
+    }
+    public PictureFile getPictureFile() {
+        return pictureFile;
+    }
+    public String getURL() {
+        try {
+            return this.pictureFile.getImageFile().toURI().toURL().toString();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    public ImageView getImageView() {
+        return this.imageView;
+    }
+
 }

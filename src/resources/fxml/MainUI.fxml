@@ -11,7 +11,7 @@
    <children>
 
       <TreeView fx:id="tv" editable="true" layoutX="54.0" layoutY="196.0" prefHeight="557.0" prefWidth="234.0" />
-      <FlowPane layoutX="288.0" layoutY="196.0" prefHeight="557.0" prefWidth="790.0" />
+      <FlowPane fx:id="picture_show" layoutX="288.0" layoutY="196.0" prefHeight="557.0" prefWidth="790.0" />
 
    </children>
 </AnchorPane>
