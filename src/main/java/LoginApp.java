@@ -1,4 +1,5 @@
 package main.java;
+//import main.Login;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -18,6 +19,7 @@ public class LoginApp extends Application {
             loader.setLocation(getClass().getResource("/resources/fxml/login.fxml"));
             Parent root = (Parent)loader.load();
             Scene scene = new Scene(root);
+            scene.getStylesheets().add(LoginApp.class.getResource("LoginApp.css").toExternalForm());
             ChangeService.stage.setScene(scene);
             ChangeService.stage.setTitle("picture-system 1.0");
             ChangeService.stage.show();

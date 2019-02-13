@@ -1,0 +1,32 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root {
+	-fx-background-image: url(xiangce.jpg);
+	-fx-background-position:-200px -50px;
+	-fx-font-size: 16px;
+	-fx-font-color:biack;
+    -fx-font-family: "Arial Black";  
+}
+.button{
+    -fx-text-fill: #006464;
+    -fx-background-color: #DFB971;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-font-family: "Arial Black";
+    -fx-padding: 5;
+}
+.label{
+	-fx-text-fill: black;
+	-fx-font-size: 24px;
+	-fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
+.TextField{
+	-fx-filter: alpha(opacity 60);
+	-fx-opacity: 0.6;
+}
+#Lable{
+	-fx-text-fill: #606064;
+	-fx-font-size: 64px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #818181;
+   -fx-effect: innershadow( three-pass-box , rgba(0,0,0,0.7) , 6, 0.0 , 0 , 2 );
+}
